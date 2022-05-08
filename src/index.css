@@ -1,0 +1,541 @@
+/* thematic color variables */
+.theme-grey {
+    --dark:rgb(55,55,55);
+    --strong:rgb(242,242,242);
+    --light:white;
+    --filterdark: invert(20%) sepia(0%) saturate(0%) hue-rotate(247deg) brightness(94%) contrast(92%);
+    --filterlight: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(103%) contrast(103%);
+}
+.theme-red {    
+    --dark:rgb(77,0,0);
+    --strong:rgb(255, 0, 0);
+    --light:rgb(255, 242, 242);
+    --filterdark: invert(6%) sepia(50%) saturate(7489%) hue-rotate(7deg) brightness(90%) contrast(110%);
+    --filterlight: invert(94%) sepia(2%) saturate(1708%) hue-rotate(314deg) brightness(103%) contrast(101%);
+}
+.theme-orange {
+    --dark:rgb(44,33,0);
+    --strong:rgb(255, 191, 0);
+    --light:rgb(255,211,77);
+    --filterdark: invert(13%) sepia(14%) saturate(4371%) hue-rotate(20deg) brightness(102%) contrast(103%);
+    --filterlight: invert(81%) sepia(73%) saturate(458%) hue-rotate(336deg) brightness(100%) contrast(102%);
+}
+.theme-yellow {
+    --dark:rgb(85, 93, 0);
+    --strong:rgb(234, 255, 0);
+    --light:rgb(255, 255, 121);
+    --filterdark: invert(28%) sepia(85%) saturate(1034%) hue-rotate(39deg) brightness(92%) contrast(101%);
+    --filterlight: invert(99%) sepia(58%) saturate(1589%) hue-rotate(327deg) brightness(109%) contrast(114%);
+}
+.theme-green {
+    --dark:rgb(0,66,44);
+    --strong:rgb(0, 255, 170);
+    --light:rgb(233, 255, 248);
+    --filterdark: invert(11%) sepia(37%) saturate(1021%) hue-rotate(149deg) brightness(92%) contrast(99%);
+    --filterlight: invert(91%) sepia(18%) saturate(228%) hue-rotate(90deg) brightness(108%) contrast(102%);
+}
+.theme-blue {
+    --dark:rgb(0,22,66);
+    --strong:rgb(0, 85, 255);
+    --light:rgb(201, 219, 255);
+    --filterdark: invert(10%) sepia(45%) saturate(2484%) hue-rotate(200deg) brightness(97%) contrast(111%);
+    --filterlight: invert(82%) sepia(6%) saturate(2107%) hue-rotate(192deg) brightness(103%) contrast(104%);
+}
+.theme-indigo {
+    --dark:rgb(44,0,99);
+    --strong:rgb(115, 0, 255);
+    --light:rgb(233, 211, 255);
+    --filterdark: invert(16%) sepia(63%) saturate(2305%) hue-rotate(253deg) brightness(75%) contrast(132%);
+    --filterlight: invert(70%) sepia(61%) saturate(205%) hue-rotate(214deg) brightness(109%) contrast(103%);
+}
+.theme-violet {
+    --dark:rgb(66,0,44);
+    --strong:rgb(255, 0, 170);
+    --light:rgb(255, 233, 248);
+    --filterdark: invert(8%) sepia(39%) saturate(5535%) hue-rotate(301deg) brightness(86%) contrast(110%);
+    --filterlight: invert(81%) sepia(19%) saturate(238%) hue-rotate(287deg) brightness(112%) contrast(102%);
+}
+
+/* general rules, setting theme */
+* {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: small;
+    background-color: var(--light);
+    color: var(--dark);
+    text-shadow: 0 0 1px var(--strong);
+    text-decoration: none;
+}
+
+h1 {
+    background-color: inherit;
+    color: inherit;
+    font-size: large;
+    font-weight: 700;
+    padding-top: 25px;
+}
+
+h2 {
+    background-color: inherit;
+    color: inherit;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h3 {
+    background-color: inherit;
+    font-size: small;
+    color: inherit;
+    font-weight: 700;
+}
+
+h4 {
+    color: inherit;
+    font-weight: 300;
+}
+
+button {
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+img {
+    background-color: transparent;
+}
+
+/* header rules */
+nav {
+    height: 100px;
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.link {
+    color: var(--light);
+}
+
+.current {
+    color: white;
+}
+
+.color {
+    display: flex;
+}
+
+.navbox {
+    background-color: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 150px;
+    background-color: inherit;
+}
+
+.red {
+    background-color: rgb(255, 0, 0);
+    width: 10px;
+    height: 100%
+}
+
+.orange {
+    background-color: rgb(255, 191, 0);
+    width: 10px;
+    height: 100%
+}
+
+.yellow {
+    background-color: rgb(234, 255, 0);
+    width: 10px;
+    height: 100%
+}
+
+.green {
+    background-color: rgb(0, 255, 170);
+    width: 10px;
+    height: 100%
+}
+
+.blue {
+    background-color: rgb(0, 85, 255);
+    width: 10px;
+    height: 100%
+}
+
+.indigo {
+    background-color: rgb(115, 0, 255);
+    width: 10px;
+    height: 100%
+}
+
+.violet {
+    background-color: rgb(255, 0, 170);
+    width: 10px;
+    height: 100%
+}
+
+.grey {
+    background-color: rgb(55,55,55);
+    width: 10px;
+    height: 100%
+}
+
+/* default floating textbox structure */
+article {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.article-contain {
+    width: 100%;
+    position: relative;
+}
+
+.textbox {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0px 0px 2px var(--strong);
+    padding: 5px;
+    font-size: small;
+    text-align: left;
+}
+
+/* about section styling */
+.avatar {
+    margin-top: 5px;
+    width: 50%;
+    padding: 30px;
+}
+
+/* project section styling */
+.project-area {
+    height: 720px;
+}
+
+.project-contain {
+    height: 10px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.project-icon {
+    position: absolute;
+    width: 380px;
+    opacity: .22;
+    z-index: 1;
+}
+
+.project-icon:hover {
+    filter: var(--filterdark);
+    opacity: .8;
+    z-index: 11;
+}
+
+.projecttextbox {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 380px;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 2px var(--strong);
+    padding: 5px;
+    font-size: small;
+    text-align: left;
+    visibility: hidden;
+}
+
+.project-contain:hover .projecttextbox{
+    visibility: visible;
+    z-index: 11;
+}
+
+#ideafora {
+    width: 500px;
+    right: 600px;
+    top: 90px;
+}
+#binaryliteral {
+    width: 600px;
+    right: 220px;
+    top: 121px;
+}
+#weathervain {
+    width: 300px;
+    right: 880px;
+    top: 33px;
+}
+#elevenhourclock {
+    width: 600px;
+    right: 750px;
+    top: 155px;
+}
+#password-generator {
+    width: 500px;
+    right: 121px;
+    top: 330px;
+}
+#quizzlestick {
+    width: 400px;
+    right: 500px;
+    top: 330px;
+}
+
+/* resume styling */
+.resumefield {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.resumebody {
+    text-align: left;
+}
+
+/* contact form styling */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+}
+
+textarea {
+    margin: 30px;
+    width: 60%;
+    height: 250px;
+    border: none;
+    resize: none;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 2px var(--strong);
+}
+
+input {
+    margin: 20px;
+    width: 60%;
+    border: none;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 2px var(--strong);
+}
+
+.contactsubmit {
+    margin: 20px;
+    width: 60%;
+    color: var(--dark);
+}
+
+/* footer styling  */
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    width: 100%;
+    padding: none;
+    margin: none;
+}
+.footerlinks {
+    background-color: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.footerlinks a {
+    background-color: inherit;
+    color: inherit;
+    padding: 10px;
+}
+
+.footerlinks a img {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    background-color: inherit;
+}
+
+.footersignature {
+    background-color: inherit;
+    color: inherit;
+    text-align: right;
+}
+
+.footersignature div {
+    background-color: inherit;
+    color: inherit;
+    font-weight: 300;
+    font-size: x-small;
+    padding: 5px;
+}
+
+/* media queries */
+@media screen and (max-width: 1000px) {
+    nav {
+        height: 200px;
+    }
+
+    .navbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .textbox {
+        width: 40%;
+        background-color: rgba(255, 255, 255, .8);
+        font-size: x-small;
+    }
+
+    h1 {
+        font-size: medium;
+    }
+    
+    h2 {
+        font-size: medium;
+        padding-top: 0px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    h3 {
+        font-size: small;
+        font-weight: 700;
+    }
+
+    /* about section */
+    .avatar {
+        width: 100%;
+        padding: 0
+    }
+
+    /* project section */
+    .project-icon {
+        position:static;
+        width: 380px;
+    }
+
+    .project-icon {
+        width: 220px;
+    }
+    
+    .project-contain {
+        width: 100%;
+        height: 280px;
+        position: relative;
+        padding-top: 30px;
+        padding-left: 5%;
+    }
+    
+    .projecttextbox {
+        visibility: visible;
+        position: absolute;
+        right: 50px;
+        top: 30px;
+        width: 30%;
+        background-color: rgba(255, 255, 255, .8);
+        box-shadow: 0px 0px 2px var(--strong);
+        padding: 5px;
+        font-size: small;
+        text-align: left;
+    }
+
+    #ideafora {
+        width: 300px;
+        opacity: .5;
+    }
+    #binaryliteral {
+        width: 300px;
+        opacity: .5;
+    }
+    #weathervain {
+        width: 300px;
+        opacity: .5;
+    }
+    #elevenhourclock {
+        width: 300px;
+        opacity: .5;
+    }
+    #password-generator {
+        width: 300px;
+        opacity: .5;
+    }
+    #quizzlestick {
+        width: 300px;
+        opacity: .5;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 80px;
+        background-color: inherit;
+    }
+    
+    nav {
+        height: 200px;
+    }
+
+    .navbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .textbox {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 50%;
+        background-color: rgba(255, 255, 255, .8);
+        font-size: x-small;
+    }
+    
+    h1 {
+        font-size: small;
+        font-weight: 500;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    h2 {
+        font-size: small;
+        font-weight: 500;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-contain {
+        width: 100%;
+        background-image: url(./assets/img/avatarsmall.jpg);
+        display: flex;
+    }
+
+    /* project section */
+    .project-contain {
+        width: 100%;
+        height: 330px;
+        padding-left: 10%;
+    }
+    
+    .projecttextbox {
+        left: 130px;
+        top: 75px;
+        width: 50%;
+    }
+}
